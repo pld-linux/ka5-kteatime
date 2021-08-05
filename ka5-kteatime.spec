@@ -36,6 +36,12 @@ guess at how long it takes for your tea to be ready. Simply select the
 type of tea you have, and it will alert you when the tea is ready to
 drink.
 
+%description -l pl.UTF-8
+KTeaTime jest przydatnym stoperem do zaparzania herbaty. Nie musisz
+więcej zgadywać jak długo trzeba czekać aż herbata będzie gotowa.
+Po prostu zaznacz typ herbaty którą masz i KTeaTime powiadomi Cię,
+gdy napój będzie gotowy do picia.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
