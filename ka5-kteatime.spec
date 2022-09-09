@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.08.0
+%define		kdeappsver	22.08.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kteatime
 Summary:	kteatime
 Summary(pl.UTF-8):	kteatime
 Name:		ka5-%{kaname}
-Version:	22.08.0
+Version:	22.08.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	a96bcac4a3ab9e1053a5b2051e3ad073
+# Source0-md5:	498402a73aa61dc05bcfbd7a0d520fff
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	Qt5Gui-devel >= 5.11.1
