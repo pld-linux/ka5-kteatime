@@ -1,34 +1,34 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.01.95
+%define		kdeappsver	23.08.4
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kteatime
 Summary:	kteatime
 Summary(pl.UTF-8):	kteatime
 Name:		ka5-%{kaname}
-Version:	24.01.95
-Release:	0.1
+Version:	23.08.4
+Release:	1
 License:	GPL v2+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	920a66bdb0ead34d0309d655c1a65679
+Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	27fde84512d424d421105a92a3d09283
 URL:		http://www.kde.org/
-BuildRequires:	Qt6Core-devel
-BuildRequires:	Qt6Gui-devel >= 5.11.1
-BuildRequires:	Qt6Widgets-devel
+BuildRequires:	Qt5Core-devel
+BuildRequires:	Qt5Gui-devel >= 5.11.1
+BuildRequires:	Qt5Widgets-devel
 BuildRequires:	gettext-devel
-BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
-BuildRequires:	kf6-kconfig-devel >= %{kframever}
-BuildRequires:	kf6-kcrash-devel >= %{kframever}
-BuildRequires:	kf6-kdoctools-devel >= %{kframever}
-BuildRequires:	kf6-ki18n-devel >= %{kframever}
-BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
-BuildRequires:	kf6-knotifications-devel >= %{kframever}
-BuildRequires:	kf6-knotifyconfig-devel >= %{kframever}
-BuildRequires:	kf6-ktextwidgets-devel >= %{kframever}
-BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
+BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf5-kconfig-devel >= %{kframever}
+BuildRequires:	kf5-kcrash-devel >= %{kframever}
+BuildRequires:	kf5-kdoctools-devel >= %{kframever}
+BuildRequires:	kf5-ki18n-devel >= %{kframever}
+BuildRequires:	kf5-kiconthemes-devel >= %{kframever}
+BuildRequires:	kf5-knotifications-devel >= %{kframever}
+BuildRequires:	kf5-knotifyconfig-devel >= %{kframever}
+BuildRequires:	kf5-ktextwidgets-devel >= %{kframever}
+BuildRequires:	kf5-kxmlgui-devel >= %{kframever}
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -75,7 +75,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kteatime
 %{_desktopdir}/org.kde.kteatime.desktop
-%{_iconsdir}/hicolor/*x*/apps/kteatime.png
+%{_iconsdir}/hicolor/16x16/apps/kteatime.png
+%{_iconsdir}/hicolor/22x22/apps/kteatime.png
+%{_iconsdir}/hicolor/32x32/apps/kteatime.png
+%{_iconsdir}/hicolor/48x48/apps/kteatime.png
+%{_iconsdir}/hicolor/64x64/apps/kteatime.png
 %{_iconsdir}/hicolor/scalable/apps/kteatime.svgz
-%{_datadir}/knotifications6/kteatime.notifyrc
+%{_datadir}/knotifications5/kteatime.notifyrc
 %{_datadir}/metainfo/org.kde.kteatime.appdata.xml
